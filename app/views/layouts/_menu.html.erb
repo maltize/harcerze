@@ -1,0 +1,9 @@
+<ul>
+  <%= render :partial => 'layouts/menu_nested', :collection => [Page.root] %>
+
+  <li class="<%= 'bold' if request.path =~ /feedback/ %>">
+    <div>
+      <%= link_to 'Kontakt', new_feedback_path %>
+    </div>
+  </li>
+</ul>

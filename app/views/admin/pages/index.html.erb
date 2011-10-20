@@ -1,0 +1,30 @@
+<h1>Dostępne strony</h1>
+
+<table>
+  <tr>
+    <th>Tytuł</th>
+    <th>Nad-strona</th>
+    <th>Przesuń</th>
+    <th>Opcje</th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%= "#{'-' * page.level} #{page.title}" %></td>
+    <td><%= page.parent.try(:title) %></td>
+    <td>
+      <%= link_to 'Góra', move_up_admin_page_path(page), :method => :put %> |
+      <%= link_to 'Dół', move_down_admin_page_path(page), :method => :put %>
+    </td>
+    <td>
+      <%= link_to 'Pokaż', admin_page_path(page) %> |
+      <%= link_to 'Edytuj', edit_admin_page_path(page) %> |
+      <%= link_to 'Usuń', admin_page_path(page), :confirm => 'Czy jesteś pewien?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nowa strona', new_admin_page_path %>

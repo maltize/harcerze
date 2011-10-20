@@ -1,0 +1,8 @@
+<% page = menu_nested %>
+
+<li class="<%= 'bold' if request.path == page_path(page) || (request.path == '/' && page == Page.root) %>">
+  <div style="margin-left:<%= (page.level > 1 ? page.level - 1 : 0) * 5 %>px">
+    <%= link_to page.title, page %>
+  </div>
+</li>
+<%= render :partial => 'layouts/menu_nested', :collection => page.children if page.self_and_descendants.include?(@page) %>

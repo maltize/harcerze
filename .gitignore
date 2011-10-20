@@ -1,0 +1,6 @@
+.rvmrc
+.bundle
+config.ru
+db/*.sqlite3
+log/*.log
+tmp/**/*

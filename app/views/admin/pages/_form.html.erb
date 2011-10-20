@@ -1,0 +1,32 @@
+<%= form_for([:admin, @page]) do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2>Strona nie została zapisana, ponieważ:</h2>
+
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title, 'Tytuł' %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content, 'Treść' %><br />
+    <%= f.wysihat_editor :content, :buttons => [:bold, :italic, :underline, :h1, :h2, :h3, :justify_left, :justify_center, :justify_right, :insert_ordered_list, :insert_unordered_list, :link, :image] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parent_id, 'Nad-strona' %><br />
+    <%= f.select :parent_id, nested_set_options(Page, @page) {|i| "#{'-' * i.level} #{i.title}" } %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Zapisz' %>
+  </div>
+<% end %>

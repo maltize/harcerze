@@ -1,0 +1,4 @@
+<li id="wysihat_file_<%= wysihat_file.id %>">
+  <%= include_link(wysihat_file) %>
+  <%= link_to 'Usuń', wysihat_file, { :remote => true, :method => :delete, :confirm => 'Czy jesteś pewien?' } %>
+</li>
