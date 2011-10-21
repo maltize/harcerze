@@ -14,7 +14,8 @@
     <div id="logo">
       <div class="container_16">
         <div class="grid_4">
-          <%= image_tag 'logo.png' %>
+          <%= image_tag 'logo.png', :id => 'pic_1' %>
+          <%= image_tag 'logo3.png', :id => 'pic_2', :style => 'display:none' %>
         </div>
         <div class="grid_12">
           Harcerze
@@ -53,6 +54,17 @@
         <span>Copyright MacGajek 2010</span>
       </div>
     </div>
+
+    <% javascript_tag do %>
+      var counter = 1;
+      var count_limit = 2;
+      function changeBanner() {
+        $('pic_' + counter).hide();
+        counter++; if(counter > count_limit) counter = 1;
+        $('pic_' + counter).show();
+      }
+      var timer = window.setInterval("changeBanner()", 10000);
+    <% end %>
 
   </body>
 </html>

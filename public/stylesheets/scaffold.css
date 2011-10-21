@@ -1,6 +1,6 @@
 body {
-  background-color: #a0ae89;
-  color: #000;
+  background-color: #FFFFFF;
+  color: #9BC959;
 }
 
 body, p, ol, ul, td {
@@ -15,14 +15,14 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #9BC959;
   text-decoration: none;
 }
 a:visited {
-  color: #000;
+  color: #9BC959;
 }
 a:hover {
-  color: #000;
+  color: #9BC959;
   text-decoration: underline;
 }
 a img {
@@ -47,11 +47,11 @@ a img {
   font-size: 12px;
   margin: -7px;
   background-color: #FFB218;
-  color: #000;
+  color: #9BC959;
 }
 
 #errorExplanation p {
-  color: #333;
+  color: #9BC959;
   margin-bottom: 0;
   padding: 12px 0 2px 7px;
 }
@@ -73,16 +73,16 @@ a img {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 2px;
-  color: #000;
+  color: #9BC959;
   font-weight: bold;
 }
 
 #flash_message #flash_notice {
-  background-color: #FFF218;
+  background-color: #DEDEDE;
 }
 
 #flash_message #flash_error {
-  background-color: #FF7218;
+  background-color: #DEDEDE;
 }
 
 table {
@@ -91,10 +91,10 @@ table {
 }
 
 #logo {
-  background-color: #079242;
+  background-color: #DEDEDE;
   text-align: center;
   font-size: 110px;
-  color: #fff;
+  color: #9BC959;
   font-weight: bold;
 }
 
@@ -105,8 +105,8 @@ table {
 #footer {
   height: 30px;
   padding-top: 8px;
-  background-color: #079242;
-  color: #fff;
+  background-color: #E1EFCD;
+  color: #9BC959;
 }
 
 #footer div {
@@ -119,7 +119,7 @@ table {
 }
 
 #footer div span a {
-  color: #000;
+  color: #9BC959;
 }
 
 #footer div span a:hover {
@@ -127,7 +127,7 @@ table {
 }
 
 #main .grid_4 a {
-  color: #fff;
+  color: #9BC959;
 }
 
 #main .grid_12 {
@@ -162,7 +162,7 @@ textarea {
 
 .grid_4 ul {
   list-style-type: none;
-  background-color: #079242;
+  background-color: #E1EFCD;
   padding: 10px 0;
 }
 
