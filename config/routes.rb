@@ -11,8 +11,10 @@ Harcerze::Application.routes.draw do
     end
   end
 
-  resources :pages
-  resources :feedbacks
+  scope(:path_names => { :new => "nowy", :edit => "edycja" }) do
+    resources :pages, :path => 'strona'
+    resources :feedbacks, :path => 'kontakt'
+  end
 
   resources :wysihat_files
 

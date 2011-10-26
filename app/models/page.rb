@@ -4,4 +4,8 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title
 
+  def to_param
+    [id, title.parameterize].join('-')
+  end
+
 end
