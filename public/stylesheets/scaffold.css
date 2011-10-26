@@ -93,13 +93,13 @@ table {
 #logo {
   background-color: #DEDEDE;
   text-align: center;
-  font-size: 110px;
+  font-size: 80px;
   color: #9BC959;
   font-weight: bold;
 }
 
 #logo .grid_12 {
-  padding-top: 12px;
+  padding-top: 35px;
 }
 
 #footer {
