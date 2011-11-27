@@ -105,8 +105,8 @@ table {
 #footer {
   height: 30px;
   padding-top: 8px;
-  background-color: #E1EFCD;
-  color: #9BC959;
+  background-color: #9BC959;
+  color: #FFFFFF;
 }
 
 #footer div {
@@ -127,7 +127,7 @@ table {
 }
 
 #main .grid_4 a {
-  color: #9BC959;
+  color: #FFFFFF;
 }
 
 #main .grid_12 {
@@ -162,7 +162,7 @@ textarea {
 
 .grid_4 ul {
   list-style-type: none;
-  background-color: #E1EFCD;
+  background-color: #9BC959;
   padding: 10px 0;
 }
 
