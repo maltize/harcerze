@@ -9,7 +9,6 @@ class UserMailerTest < ActionMailer::TestCase
     assert !ActionMailer::Base.deliveries.empty?
 
     assert_equal [UserMailer::FEEDBACK_EMAIL], email.to
-    assert_equal "Harcerze - Wiadomość z serwisu", email.subject
     assert_match /#{feedback.username}/, email.encoded
     assert_match /#{feedback.message}/, email.encoded
   end
